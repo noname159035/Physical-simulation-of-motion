@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Physical simulation of motion</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Resurces/res.qrc">
+    <normaloff>:/Resurses_2/icon.png</normaloff>:/Resurses_2/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/Resurses_2/фон_фз.jpg);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="line_input_way">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>180</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Old Style</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resurses_2/кремовый.jpg);
+border: 4px solid #0B1D9D;
+border-radius: 6px;</string>
+    </property>
+    <property name="text">
+     <string>S</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_line_input_way">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>240</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+background-image: url(:/Resurses_2/white.jpg);
+	border: 4px solid #0B1D9D;
+	border-radius: 6px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>ПОДТВЕРДИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_line_input_acceleration">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>240</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+background-image: url(:/Resurses_2/white.jpg);
+	border: 4px solid #0B1D9D;
+	border-radius: 6px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>ПОДТВЕРДИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_input_acceleration">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>180</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Old Style</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resurses_2/кремовый.jpg);
+border: 4px solid #0B1D9D;
+border-radius: 6px;</string>
+    </property>
+    <property name="text">
+     <string>a</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_line_input_speed_start">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>240</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+background-image: url(:/Resurses_2/white.jpg);
+	border: 4px solid #0B1D9D;
+	border-radius: 6px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>ПОДТВЕРДИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_input_speed_start">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>180</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Old Style</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resurses_2/кремовый.jpg);
+border: 4px solid #0B1D9D;
+border-radius: 6px;</string>
+    </property>
+    <property name="text">
+     <string>U(0)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_input_time">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>300</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Old Style</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resurses_2/кремовый.jpg);
+border: 4px solid #0B1D9D;
+border-radius: 6px;</string>
+    </property>
+    <property name="text">
+     <string>t</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_line_input_speed_finish">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>360</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+background-image: url(:/Resurses_2/white.jpg);
+	border: 4px solid #0B1D9D;
+	border-radius: 6px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>ПОДТВЕРДИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_line_input_time">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>360</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+background-image: url(:/Resurses_2/white.jpg);
+	border: 4px solid #0B1D9D;
+	border-radius: 6px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>ПОДТВЕРДИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="line_input_speed_finish">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>300</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Old Style</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/Resurses_2/кремовый.jpg);
+border: 4px solid #0B1D9D;
+border-radius: 6px;</string>
+    </property>
+    <property name="text">
+     <string>U(к)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_line_finish_input">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>430</y>
+      <width>341</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+background-image: url(:/Resurses_2/white.jpg);
+	border: 4px solid #0B1D9D;
+	border-radius: 6px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>ЗАКОНЧИТЬ ВВОД</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../Resurces/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

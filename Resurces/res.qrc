@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="Resurses_2">
+    <file>icon.png</file>
+    <file>albert-einstein.jpg</file>
+    <file>ayGnWcAejnE.jpg</file>
+    <file>kvant-ili-tuda-i-obratno-novyi-algoritm-izucheniya-kvantovo-klassicheskogo-perehoda.jpeg</file>
+    <file>white.jpg</file>
+    <file>white-active.jpg</file>
+    <file>white-hover.jpg</file>
+    <file>кремовый.jpg</file>
+    <file>физика-doodles-безшовная-картина-30554142.jpg</file>
+    <file>фон.jpg</file>
+    <file>фон_фз.jpg</file>
+    <file>ФонЧистый.jpg</file>
+  </qresource>
+</RCC>

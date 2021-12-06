@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI Black</family>
+    <pointsize>12</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Physical simulation of motion</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Resurces/res.qrc">
+    <normaloff>:/Resurses_2/icon.png</normaloff>:/Resurses_2/icon.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/Resurses_2/фон.jpg)</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="choose_move3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>360</y>
+      <width>271</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-image: url(:/Resurses_2/white.jpg);
+	border: 5px solid #0B1D9D;
+	border-radius: 10px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>Под углом</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="choose_move2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>260</y>
+      <width>271</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-image: url(:/Resurses_2/white.jpg);
+	border: 5px solid #0B1D9D;
+	border-radius: 10px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>По прямой</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="choose_move1">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>160</y>
+      <width>271</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Goudy Stout</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-image: url(:/Resurses_2/white.jpg);
+	border: 5px solid #0B1D9D;
+	border-radius: 10px;
+}
+QWidget:hover{
+    background-image: url(:/Resurses_2/white-hover.jpg);
+}
+QWidget:pressed{
+    background-image: url(:/Resurses_2/white-active.jpg);
+}</string>
+    </property>
+    <property name="text">
+     <string>По окружности</string>
+    </property>
+    <property name="shortcut">
+     <string/>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../Resurces/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
