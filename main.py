@@ -36,6 +36,9 @@ from window_circle import Ui_Circle
 from window_line import Ui_Line
 from window_angle import Ui_Angle
 
+
+
+
 class MainWindow(QMainWindow):
     global window_main
 

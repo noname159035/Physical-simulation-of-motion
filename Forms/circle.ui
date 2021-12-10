@@ -341,7 +341,7 @@ QWidget:pressed{
      <string>ПОДТВЕРДИТЬ</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_circle_input_way_2">
+   <widget class="QPushButton" name="button_circle_input_radius">
     <property name="geometry">
      <rect>
       <x>50</x>
