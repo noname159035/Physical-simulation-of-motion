@@ -27,3 +27,14 @@ var = {
     "angle_L": 0,
     "angle_t_fall": 0
 }
+def find_circle_w1 (circle_U, circle_R):
+    circle_W = circle_U / circle_R
+    return circle_W
+
+def find_circle_a_o (circle_U, circle_R):
+    circle_a_o = circle_U**2 / circle_R
+    return circle_a_o
+
+def find_circle_t (circle_U, circle_R):
+    circle_a_o = circle_U**2 / circle_R
+    return circle_a_o
