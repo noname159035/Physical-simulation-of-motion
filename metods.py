@@ -7,11 +7,11 @@
 
 var = {
     "circle_U": 0,
-    "circke_w": 0,
-    "circke_R": 0,
-    "circke_t": 0,
-    "circke_S_way": 0,
-    "circke_a_o": 0,
+    "circle_w": 0,
+    "circle_R": 0,
+    "circle_t": 0,
+    "circle_S_way": 0,
+    "circle_a_o": 0,
     "line_U_st": 0,
     "line_a": 0,
     "line_t": 0,

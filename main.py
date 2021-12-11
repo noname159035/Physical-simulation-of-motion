@@ -69,6 +69,6 @@ if __name__ == '__main__':
     window_main = MainWindow()
     window_circle = Ui_Circle()
     window_line = Ui_Line()
-    window_angle = Ui_Angle
+    window_angle = Ui_Angle()
     window_main.show()
     app.exec_()

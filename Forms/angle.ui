@@ -418,7 +418,7 @@ border-radius: 6px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_angle_input_time_finish">
+   <widget class="QPushButton" name="button_angle_input_time_fall">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -518,7 +518,7 @@ QWidget:pressed{
      <string>ПОДТВЕРДИТЬ</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="angle_input_time_finish">
+   <widget class="QLineEdit" name="angle_input_time_fall">
     <property name="geometry">
      <rect>
       <x>340</x>
