@@ -149,7 +149,7 @@ def find_line_U_fin1(line_a, line_t, line_U_st):
 def find_line_U_fin2(line_a, line_t, line_S_mov):
     line_U_st = (2 * line_S_mov + line_a * line_t ** 2) / 2 * line_t
     return line_U_st
-
+#   функции называются одинаково, исключая индексы, но выводят разное!
 
 def find_line_S_mov1(line_U_st, line_a, line_t):
     line_S_mov = line_U_st * line_t + line_a * line_t ** 2 / 2
