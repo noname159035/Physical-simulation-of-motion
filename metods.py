@@ -156,6 +156,6 @@ def find_line_S_mov2(line_U_fin, line_a, line_t):
     return line_S_mov
 
 
-def find_line_L1(line_S_mov, line_t, line_a):
+def find_line_L(line_S_mov, line_t, line_a):
     line_L = line_S_mov ** 2 / line_t * line_a
     return line_L
