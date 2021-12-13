@@ -2,11 +2,11 @@
 #
 #движ по окружности
 # circle_U - скорость
-# circke_w - угловая сакорость
-# circke_R - радиус
-# circke_t - время
-# circke_S - путь
-# circke_a_o - нормальн ускорение
+# circle_w - угловая сакорость
+# circle_R - радиус
+# circle_t - время
+# circle_S - путь
+# circle_a_o - нормальн ускорение
 # circle_T - период
 # circle_delta_s - смещение
 # circle_delta_f - угловое смещение
