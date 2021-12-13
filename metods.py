@@ -88,16 +88,16 @@ def find_angle_U_st_y (angle_U_st, angle_d):
     angle_U_st_y = math.sin(angle_d) * angle_U_st
     return angle_U_st_y
 
-def find_ange_t (angle_U_st_y):
-    angle_t = angle_U_st_y / 9.81
-    return angle_t
+def find_ange_t_fall (angle_U_st_y):
+    angle_t_fall = angle_U_st_y / 9.81
+    return angle_t_fall
 
 def find_ange_H (angle_h_st, angle_U_st_y):
     angle_H = angle_h_st + angle_U_st_y ** 2 / (9.81 * 2)
     return angle_H
 
-def find_ange_L (angle_U_st_x, angle_t_fall):
-    ange_L = angle_U_st_x * angle_t_fall
+def find_ange_L (angle_U_st_x, angle_t):
+    ange_L = angle_U_st_x * angle_t
     return ange_L
 
 def find_angle_U_fin (angle_h_st, angle_U_st):
@@ -110,11 +110,15 @@ def find_angle_U_st (angle_U_fin, angle_h_st):
     angle_U_st = math.sqrt(angle_U_fin ** 2 - 2 * 9.81 * angle_h_st)
     return angle_U_st
 
-def find_angle_h_st (angle_t, angle_H):
-    angle_h_st = angle_H - 9.81 * angle_t ** 2 / 2
+def find_angle_h_st (angle_t_fall, angle_H):
+    angle_h_st = angle_H - 9.81 * angle_t_fall ** 2 / 2
     return angle_h_st
 
-def find_angle_d (angle_U_st, angle_t):
+def find_angle_d (angle_U_st, angle_t_fall):
     from math import asin
-    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t))
+    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t_fall)
     return angle_d
+
+def find_angle_t (angle_L, angle_U_st_x):
+    angle_t = angle_L / angle_U_st_x
+    return angle_t
