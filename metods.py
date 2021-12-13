@@ -7,11 +7,11 @@
 
 var = {
     "circle_U": 0,
-    "circke_w": 0,
-    "circke_R": 0,
-    "circke_t": 0,
-    "circke_S_way": 0,
-    "circke_a_o": 0,
+    "circle_w": 0,
+    "circle_R": 0,
+    "circle_t": 0,
+    "circle_S_way": 0,
+    "circle_a_o": 0,
     "line_U_st": 0,
     "line_a": 0,
     "line_t": 0,
@@ -62,3 +62,12 @@ def find_circle_U2 (circle_S, circle_t):
 def find_circle_R (circle_U, circle_w):
     circle_R = circle_U / circle_w
     return circle_R
+
+def find_circle_U3 (circle_a_o, circle_R):
+    from math import sqrt
+    circle_U = math.sqrt(circle_a_o * circle_R)
+    return circle_U
+
+def find_circle_t (circle_S, circle_U):
+    circle_t = circle_S / circle_U
+    return circle_t
