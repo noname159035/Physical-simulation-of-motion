@@ -1,7 +1,5 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QMainWindow
-
-import metods
 from Resurces import res_rc
 from metods import var
 
@@ -21,7 +19,7 @@ class Ui_Circle(QMainWindow):
         self.button_circle_input_radius.clicked.connect(self.save_radius)
         self.button_circle_input_time.clicked.connect(self.save_time)
         self.button_circle_input_acceleration_start.clicked.connect(self.save_acceleration)
-        self.button_circle_finish_inputclicked.connect(self.save_val)
+        self.button_circle_finish_input.clicked.connect(self.save_val)
 
     def save_speed(self):
         try:
