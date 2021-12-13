@@ -27,14 +27,38 @@ var = {
     "angle_L": 0,
     "angle_t_fall": 0
 }
-def find_circle_w1 (circle_U, circle_R):
-    circle_W = circle_U / circle_R
-    return circle_W
+def find_circle_w (circle_U, circle_R):
+    circle_w = circle_U / circle_R
+    return circle_w
+
+def find_circle_U (circle_w, circle_R):
+    circle_U = circle_w * circle_R
+    return circle_U
 
 def find_circle_a_o (circle_U, circle_R):
     circle_a_o = circle_U**2 / circle_R
     return circle_a_o
 
-def find_circle_t (circle_U, circle_R):
-    circle_a_o = circle_U**2 / circle_R
-    return circle_a_o
+def find_circle_S (circle_U, circle_t):
+    circle_S = circle_U*circle_t
+    return circle_S
+
+def find_circle_T (circle_U, circle_R):
+    circle_T = 2 * pi * circle_R / circle_U
+    return circle_T
+
+def find_circle_delta_s (circle_S, circle_U, circle_T, circle_t):
+    circle_delta_s = circle_S - circle_U * circle_T * (circle_t / circle_T )
+    return circle_delta_s
+
+def find_circle_f (circle_delta_s, circle_R):
+    circle_f = circle_delta_s / circle_R
+    return circle_f
+
+def find_circle_U2 (circle_S, circle_t):
+    circle_U = circle_S / circle_t
+    return circle_U
+
+def find_circle_R (circle_U, circle_w):
+    circle_R = circle_U / circle_w
+    return circle_R

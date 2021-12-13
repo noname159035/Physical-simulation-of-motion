@@ -5,9 +5,13 @@
 # circke_w - угловая сакорость
 # circke_R - радиус
 # circke_t - время
-# circke_S_way - путь
+# circke_S - путь
 # circke_a_o - нормальн ускорение
 # circle_T - период
+# circle_delta_s - смещение
+# circle_delta_f - угловое смещение
+
+
 #линейное движ
 #
 # line_U_st - начальн скорость
