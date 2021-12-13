@@ -11,9 +11,12 @@ var = {
     "circle_w": 0,
     "circle_R": 0,
     "circle_t": 0,
-    "circle_S_way": 0,
+    "circle_S": 0,
     "circle_a_o": 0,
+    "circle_T": 0,
     "line_U_st": 0,
+    "circle_delta_s": 0,
+    "circle_delta_f": 0,
     "line_a": 0,
     "line_t": 0,
     "line_U_fin": 0,
@@ -26,7 +29,9 @@ var = {
     "angle_U_fin": 0,
     "angle_H": 0,
     "angle_L": 0,
-    "angle_t_fall": 0
+    "angle_t_fall": 0,
+    "angle_U_st_x": 0,
+    "angle_U_st_y": 0
 }
 
 #ДВИЖЕНИЕ ПО ОКРУЖНОСТИ
@@ -55,9 +60,9 @@ def find_circle_delta_s (circle_S, circle_U, circle_T, circle_t):
     circle_delta_s = circle_S - circle_U * circle_T * (circle_t / circle_T )
     return circle_delta_s
 
-def find_circle_f (circle_delta_s, circle_R):
-    circle_f = circle_delta_s / circle_R
-    return circle_f
+def find_circle_delta_f (circle_delta_s, circle_R):
+    circle_delta_f = circle_delta_s / circle_R
+    return circle_delta_f
 
 def find_circle_U2 (circle_S, circle_t):
     circle_U = circle_S / circle_t
