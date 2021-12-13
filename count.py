@@ -15,7 +15,7 @@ def final_count_circle ():
     elif metods.var['line_U_fin'] != 0:
         metods.var['line_U_st'] = metods.find_line_U_st1(metods.var['line_a'], metods.var['line_t'], metods.var['line_U_fin'])
         metods.var['line_S_mov'] = metods.find_line_S_mov2(metods.var['line_U_fin'], metods.var['line_a'],  metods.var['line_t'])
-    metods.var['line_L'] = metods.find_line_S_mov2(metods.var['line_S_mov'], metods.var['line_t'], metods.var['line_a'])
+    metods.var['line_L'] = metods.find_line_L(metods.var['line_S_mov'], metods.var['line_t'], metods.var['line_a'])
 
 
 
