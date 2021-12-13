@@ -27,6 +27,9 @@ var = {
     "angle_L": 0,
     "angle_t_fall": 0
 }
+
+#ДВИЖЕНИЕ ПО ОКРУЖНОСТИ
+
 def find_circle_w (circle_U, circle_R):
     circle_w = circle_U / circle_R
     return circle_w
@@ -44,7 +47,7 @@ def find_circle_S (circle_U, circle_t):
     return circle_S
 
 def find_circle_T (circle_U, circle_R):
-    circle_T = 2 * pi * circle_R / circle_U
+    circle_T = 2 * 3.14 * circle_R / circle_U
     return circle_T
 
 def find_circle_delta_s (circle_S, circle_U, circle_T, circle_t):
@@ -71,3 +74,47 @@ def find_circle_U3 (circle_a_o, circle_R):
 def find_circle_t (circle_S, circle_U):
     circle_t = circle_S / circle_U
     return circle_t
+
+
+#ДВИЖЕНИЕ ПОД УГЛОМ К ГОРИЗОНТУ
+
+def find_angle_U_st_x (angle_U_st, angle_d)
+    from math import cos
+    angle_U_st_x = math.cos(angle_d) * angle_U_st
+    return angle_U_st_x
+
+def find_angle_U_st_y (angle_U_st, angle_d):
+    from math import sin
+    angle_U_st_y = math.sin(angle_d) * angle_U_st
+    return angle_U_st_y
+
+def find_ange_t (angle_U_st_y):
+    angle_t = angle_U_st_y / 9.81
+    return angle_t
+
+def find_ange_H (angle_h_st, angle_U_st_y):
+    angle_H = angle_h_st + angle_U_st_y ** 2 / (9.81 * 2)
+    return angle_H
+
+def find_ange_L (angle_U_st_x, angle_t_fall):
+    ange_L = angle_U_st_x * angle_t_fall
+    return ange_L
+
+def find_angle_U_fin (angle_h_st, angle_U_st):
+    from math import sqrt
+    angle_U_fin = math.sqrt(2 * 9.81 * angle_h_st + angle_U_st ** 2)
+    return angle_U_fin
+
+def find_angle_U_st (angle_U_fin, angle_h_st):
+    from math import sqrt
+    angle_U_st = math.sqrt(angle_U_fin ** 2 - 2 * 9.81 * angle_h_st)
+    return angle_U_st
+
+def find_angle_h_st (angle_t, angle_H):
+    angle_h_st = angle_H - 9.81 * angle_t ** 2 / 2
+    return angle_h_st
+
+def find_angle_d (angle_U_st, angle_t):
+    from math import asin
+    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t))
+    return angle_d

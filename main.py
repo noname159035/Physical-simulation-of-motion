@@ -25,13 +25,14 @@
 #
 # angle_U_st - начальн скорость
 # angle_d - угол альфа
-# angle_t - время
+# angle_t - время подъема
 # angle_h_st - начальн высота
 # angle_U_fin - конечн скорость
 # angle_H - макс высота подъема
 # angle_L - длинна пути (горизонтальн)
-# angle_t_fall - время падения
-#
+# angle_t_fall - время полета !!!!!!!!!!!!!!!!!!!!
+# angle_U_st_x - начальн скорость по OX
+# angle_U_st_y - начальн скорость по OY
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QStackedWidget
