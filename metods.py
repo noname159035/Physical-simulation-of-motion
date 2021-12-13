@@ -123,3 +123,39 @@ def find_angle_d (angle_U_st, angle_t_fall):
 def find_angle_t (angle_L, angle_U_st_x):
     angle_t = angle_L / angle_U_st_x
     return angle_t
+
+#ПРЯМОЛИНЕЙНОЕ ДВИЖЕНИЕ
+
+def find_line_U_st1(line_a, line_t, line_U_fin):
+    line_U_st = line_U_fin - line_a * line_t
+    return line_U_st
+
+
+def find_line_U_st2(line_a, line_t, line_S_mov):
+    line_U_st = (2 * line_S_mov - line_a * line_t ** 2) / 2 * line_t
+    return line_U_st
+
+
+def find_line_U_fin1(line_a, line_t, line_U_st):
+    line_U_fin = line_U_st + line_a * line_t
+    return line_U_fin
+
+
+def find_line_U_fin2(line_a, line_t, line_S_mov):
+    line_U_st = (2 * line_S_mov + line_a * line_t ** 2) / 2 * line_t
+    return line_U_st
+
+
+def find_line_S_mov1(line_U_st, line_a, line_t):
+    line_S_mov = line_U_st * line_t + line_a * line_t ** 2 / 2
+    return line_S_mov
+
+
+def find_line_S_mov2(line_U_fin, line_a, line_t):
+    line_S_mov = line_U_fin * line_t - line_a * line_t ** 2 / 2
+    return line_S_mov
+
+
+def find_line_L1(line_S_mov, line_t, line_a):
+    line_L = line_S_mov ** 2 / line_t * line_a
+    return line_L
