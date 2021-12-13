@@ -120,7 +120,7 @@ class Ui_Circle(QMainWindow):
 
     def save_acceleration(self):
         try:
-            var["circke_a_o"] = float(self.circle_input_acceleration_start.text())
+            var["circle_a_o"] = float(self.circle_input_acceleration_start.text())
             self.circle_input_time.hide()
             self.button_circle_input_time.hide()
 
