@@ -4,6 +4,7 @@
 #     Ek = (m*(u**2))/2
 #     return Ek
 #Название функции писать как find_"величина"
+import math
 
 var = {
     "circle_U": 0,
@@ -78,7 +79,7 @@ def find_circle_t (circle_S, circle_U):
 
 #ДВИЖЕНИЕ ПОД УГЛОМ К ГОРИЗОНТУ
 
-def find_angle_U_st_x (angle_U_st, angle_d)
+def find_angle_U_st_x (angle_U_st, angle_d):
     from math import cos
     angle_U_st_x = math.cos(angle_d) * angle_U_st
     return angle_U_st_x
@@ -116,7 +117,7 @@ def find_angle_h_st (angle_t_fall, angle_H):
 
 def find_angle_d (angle_U_st, angle_t_fall):
     from math import asin
-    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t_fall)
+    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t_fall))
     return angle_d
 
 def find_angle_t (angle_L, angle_U_st_x):
