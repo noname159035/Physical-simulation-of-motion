@@ -89,15 +89,15 @@ def find_angle_U_st_y (angle_U_st, angle_d):
     angle_U_st_y = math.sin(angle_d) * angle_U_st
     return angle_U_st_y
 
-def find_ange_t_fall (angle_U_st_y):
+def find_angle_t_fall (angle_U_st_y):
     angle_t_fall = angle_U_st_y / 9.81
     return angle_t_fall
 
-def find_ange_H (angle_h_st, angle_U_st_y):
+def find_angle_H (angle_h_st, angle_U_st_y):
     angle_H = angle_h_st + angle_U_st_y ** 2 / (9.81 * 2)
     return angle_H
 
-def find_ange_L (angle_U_st_x, angle_t):
+def find_angle_L (angle_U_st_x, angle_t):
     ange_L = angle_U_st_x * angle_t
     return ange_L
 
