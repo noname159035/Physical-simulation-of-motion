@@ -57,7 +57,7 @@ def find_circle_T (circle_U, circle_R):
     return circle_T
 
 def find_circle_delta_s (circle_S, circle_U, circle_T, circle_t):
-    circle_delta_s = circle_S - circle_U * circle_T * (circle_t / circle_T )
+    circle_delta_s = circle_S - circle_U * circle_T * (circle_t // circle_T )
     return circle_delta_s
 
 def find_circle_delta_f (circle_delta_s, circle_R):
@@ -132,6 +132,14 @@ def find_angle_d (angle_U_st, angle_t_fall):
 def find_angle_t (angle_L, angle_U_st_x):
     angle_t = angle_L / angle_U_st_x
     return angle_t
+
+def find_angle_x_t (angle_U_st_x):
+    angle_x_t = angle_U_st_x * t
+    return angle_x_t
+
+def find_angle_y_t (angle_U_st_y):
+    angle_y_t = angle_h_st + angle_U_st_y * t - 9.81 * t ** 2 / 2
+    return angle_y_t
 
 #ПРЯМОЛИНЕЙНОЕ ДВИЖЕНИЕ
 
