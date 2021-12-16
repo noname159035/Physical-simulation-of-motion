@@ -57,7 +57,7 @@ def find_circle_T (circle_U, circle_R):
     return circle_T
 
 def find_circle_delta_s (circle_S, circle_U, circle_T, circle_t):
-    circle_delta_s = circle_S - circle_U * circle_T * (circle_t / circle_T )
+    circle_delta_s = circle_S - circle_U * circle_T * (circle_t // circle_T )
     return circle_delta_s
 
 def find_circle_delta_f (circle_delta_s, circle_R):
