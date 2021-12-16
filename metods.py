@@ -127,7 +127,6 @@ def find_angle_L (angle_U_st_x, angle_t):
 
 def find_angle_U_fin (angle_h_st, angle_U_st):
     '''Функция возвращающая значение конечной скорости при движении типа бросок по углом к горизонту'''
-    from math import sqrt
     angle_U_fin = math.sqrt(2 * 9.81 * angle_h_st + angle_U_st ** 2)
     return angle_U_fin
 
