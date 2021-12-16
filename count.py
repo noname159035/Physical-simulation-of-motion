@@ -48,10 +48,8 @@ def final_count_circle():
             metods.var['circle_w'] = metods.find_circle_w(metods.var['circle_U'], metods.var['circle_R'])
             metods.var['circle_T'] = metods.find_circle_T(metods.var['circle_U'], metods.var['circle_R'])
             metods.var['circle_t'] = metods.find_circle_S(metods.var['circle_S'], metods.var['circle_U'])
-            metods.var['circle_delta_s'] = metods.find_circle_delta_s(metods.var['circle_S'], metods.var['circle_U'],
-                                                                      metods.var['circle_T'], metods.var['circle_t'])
-            metods.var['circle_delta_f'] = metods.find_circle_delta_f(metods.var['circle_delta_s'],
-                                                                      metods.var['circle_R'])
+            metods.var['circle_delta_s'] = metods.find_circle_delta_s(metods.var['circle_S'], metods.var['circle_U'], metods.var['circle_T'], metods.var['circle_t'])
+            metods.var['circle_delta_f'] = metods.find_circle_delta_f(metods.var['circle_delta_s'], metods.var['circle_R'])
 
 
 
