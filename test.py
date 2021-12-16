@@ -34,4 +34,8 @@ class metod_test(unittest.TestCase):
     def test_15(self):
         self.assertEqual(find_angle_t_fall(29.43), 3)
     def test_16(self):
-        self.assertEqual(find_angle_H(10, 192.4722), 10)
+        self.assertEqual(find_angle_H(10, 19.62), 29.62)
+    def test_17(self):
+        self.assertEqual(find_angle_L(10, 3), 30)
+    def test_18(self):
+        self.assertEqual(find_angle_U_fin(19.62, 0), 19.62)
