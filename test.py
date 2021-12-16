@@ -1,6 +1,5 @@
 import unittest
 from metods import *
-
 class metod_test(unittest.TestCase):
     def test_1(self):
         self.assertEqual(find_circle_w(10.4, 5.2), 2)
