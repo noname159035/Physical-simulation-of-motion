@@ -133,6 +133,14 @@ def find_angle_t (angle_L, angle_U_st_x):
     angle_t = angle_L / angle_U_st_x
     return angle_t
 
+def find_angle_x_t (angle_U_st_x):
+    angle_x_t = angle_U_st_x * t
+    return angle_x_t
+
+def find_angle_y_t (angle_U_st_y):
+    angle_y_t = angle_h_st + angle_U_st_y * t - 9.81 * t ** 2 / 2
+    return angle_y_t
+
 #ПРЯМОЛИНЕЙНОЕ ДВИЖЕНИЕ
 
 def find_line_U_st1(line_a, line_t, line_U_fin):
