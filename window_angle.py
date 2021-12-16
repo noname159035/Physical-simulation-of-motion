@@ -167,3 +167,4 @@ class Ui_Angle(QMainWindow):
             t += 0.1
 
         plt.plot(x, y)
+        plt.show()
