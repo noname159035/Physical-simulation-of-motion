@@ -39,3 +39,7 @@ class metod_test(unittest.TestCase):
         self.assertEqual(find_angle_L(10, 3), 30)
     def test_18(self):
         self.assertEqual(find_angle_U_fin(19.62, 0), 19.62)
+    def test_19(self):
+        self.assertEqual(find_angle_U_st(19.62, 19.62), 0)
+    def test_20(self):
+        self.assertEqual(find_angle_U_fin(19.62, 0), 19.62)
