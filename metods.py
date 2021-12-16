@@ -97,7 +97,6 @@ def find_circle_t (circle_S, circle_U):
     circle_t = circle_S / circle_U
     return circle_t
 
-
 #ДВИЖЕНИЕ ПОД УГЛОМ К ГОРИЗОНТУ
 
 def find_angle_U_st_x (angle_U_st, angle_d):
@@ -167,18 +166,15 @@ def find_line_U_st1(line_a, line_t, line_U_fin):
     line_U_st = line_U_fin - line_a * line_t
     return line_U_st
 
-
 def find_line_U_st2(line_a, line_t, line_S_mov):
     '''Функция возвращающая значение начальной скорости при заданных ускорении, времени, и пути в прямолинейном движении'''
     line_U_st = (2 * line_S_mov - line_a * line_t ** 2) / 2 * line_t
     return line_U_st
 
-
 def find_line_U_fin1(line_a, line_t, line_U_st):
     '''Функция возвращающая значение конечной скорости при заданных ускорении, времени, и начальной скорости в прямолинейном движении'''
     line_U_fin = line_U_st + line_a * line_t
     return line_U_fin
-
 
 def find_line_U_fin2(line_a, line_t, line_S_mov):
     '''Функция возвращающая значение конечной скорости при заданных ускорении, времени, и пути в прямолинейном движении'''
@@ -190,12 +186,10 @@ def find_line_S_mov1(line_U_st, line_a, line_t):
     line_S_mov = line_U_st * line_t + line_a * line_t ** 2 / 2
     return line_S_mov
 
-
 def find_line_S_mov2(line_U_fin, line_a, line_t):
     '''Функция возвращающая значение пути при заданных ускорении, времени, и конечной скорости в прямолинейном движении'''
     line_S_mov = line_U_fin * line_t - line_a * line_t ** 2 / 2
     return line_S_mov
-
 
 def find_line_L(line_S_mov, line_t, line_a):
     '''Функция возвращающая значение перемещения при заданных ускорении, времени, и пути в прямолинейном движении'''
