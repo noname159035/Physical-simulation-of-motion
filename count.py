@@ -1,7 +1,5 @@
 import metods
 from metods import *
-
-        #metods.var['circle_t'] = metods.find_angle_H(metods.var['circle_w'], ..... аналогично заполнять )
 def final_count_line():
     if metods.var['line_U_st'] != 0:
         metods.var['line_U_fin'] = metods.find_line_U_fin1(metods.var['line_a'], metods.var['line_t'], metods.var['line_U_st'])
