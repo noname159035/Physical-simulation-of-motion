@@ -133,5 +133,12 @@ class Ui_Circle(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
-        print(var)
+        uic.loadUi('Forms\\output_circle.ui', self)
+        self.circle_out_angle_speed.insert("circle_w")
+        self.circle_out_speed.insert("circle_U")
+        self.circle_out_del_way.insert("circle_delta_s")
+        self.circle_out_T.insert("circle_T")
+        self.circle_out_radius.insert("circle_R")
+        self.circle_out_acceleration_start.insert("circle_a_o")
+        self.circle_out_del_power.insert("circle_delta_f")
 

@@ -1,7 +1,10 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QMainWindow
+import matplotlib.pyplot as plt
 from Resurces import res_rc
 from metods import var
+from metods import find_angle_x_t, find_angle_y_t
+
 
 class Ui_Angle(QMainWindow):
     def __init__(self, *args, **kwargs):
@@ -143,4 +146,24 @@ class Ui_Angle(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
-        print(var)
+        uic.loadUi('Forms\\output_angle.ui', self)
+        self.angle_out_speed_start.insert("angle_U_st")
+        self.angle_out_angle.insert("angle_d")
+        self.angle_out_time.insert("angle_t")
+        self.angle_out_hight_start.insert("angle_h_st")
+        self.angle_out_speed_fin.insert("angle_U_fin")
+        self.angle_out_BigH.insert("angle_H")
+        self.angle_out_len.insert("angle_L")
+        self.angle_out_time_fall.insert("angle_t_fall")
+
+        self.angle_show_graph.clicked.connect(self.get_graph)
+
+    def get_graph(self):
+        t = 0
+        x, y = [], []
+        while t < var["angle_t"]:
+            x.append(find_angle_x_t(var["angle_U_st_x"], t))
+            y.append(find_angle_y_t(var["angle_U_st_y"], t))
+            t += 0.1
+
+        plt.plot(x, y)

@@ -113,4 +113,8 @@ class Ui_Line(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
-        print(var)
+        uic.loadUi('Forms\\output_line.ui', self)
+        self.line_out_speed_start.insert("line_U_st")
+        self.line_out_mov.insert("line_S_mov")
+        self.line_out_speed_fin.insert("line_U_fin")
+        self.line_out_L.insert("line_L")
