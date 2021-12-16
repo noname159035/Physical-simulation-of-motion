@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from Resurces import res_rc
 from metods import var
 from metods import find_angle_x_t, find_angle_y_t
+from count import final_count_angle
 
 
 class Ui_Angle(QMainWindow):
@@ -146,15 +147,16 @@ class Ui_Angle(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
-        uic.loadUi('Forms\\output_angle.ui', self)
-        self.angle_out_speed_start.insert("angle_U_st")
-        self.angle_out_angle.insert("angle_d")
-        self.angle_out_time.insert("angle_t")
-        self.angle_out_hight_start.insert("angle_h_st")
-        self.angle_out_speed_fin.insert("angle_U_fin")
-        self.angle_out_BigH.insert("angle_H")
-        self.angle_out_len.insert("angle_L")
-        self.angle_out_time_fall.insert("angle_t_fall")
+        final_count_angle()
+        uic.loadUi('Forms\output_angle.ui', self)
+        self.angle_out_speed_start.insert(str(var["angle_U_st"]))
+        self.angle_out_angle.insert(str(var["angle_d"]))
+        self.angle_out_time.insert(str(var["angle_t"]))
+        self.angle_out_hight_start.insert(str(var["angle_h_st"]))
+        self.angle_out_speed_fin.insert(str(var["angle_U_fin"]))
+        self.angle_out_BigH.insert(str(var["angle_H"]))
+        self.angle_out_len.insert(str(var["angle_L"]))
+        self.angle_out_time_fall.insert(str(var["angle_t_fall"]))
 
         self.angle_show_graph.clicked.connect(self.get_graph)
 
