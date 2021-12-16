@@ -30,8 +30,7 @@ def final_count_circle():
 
     elif metods.var['circle_S'] != 0 and metods.var['circle_t'] != 0 and metods.var['circle_w'] != 0:
             metods.var['circle_U'] = metods.find_circle_U2(metods.var['circle_S'], metods.var['circle_t'])
-            metods.var['circle_R'] = metods.find_circle_R2(metods.var['circle_S'], metods.var['circle_t'],
-                                                           metods.var['circle_w'])
+            metods.var['circle_R'] = metods.find_circle_R2(metods.var['circle_S'], metods.var['circle_t'], metods.var['circle_w'])
             metods.var['circle_T'] = metods.find_circle_T(metods.var['circle_U'], metods.var['circle_R'])
             metods.var['circle_a_o'] = metods.find_circle_a_o(metods.var['circle_U'], metods.var['circle_R'])
             metods.var['circle_S'] = metods.find_circle_S(metods.var['circle_U'], metods.var['circle_t'])
