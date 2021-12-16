@@ -183,7 +183,7 @@ def find_line_U_st1(line_a, line_t, line_U_fin):
 
 def find_line_U_st2(line_a, line_t, line_S_mov):
     '''Функция возвращающая значение начальной скорости при заданных ускорении, времени, и пути в прямолинейном движении'''
-    line_U_st = (2 * line_S_mov - line_a * line_t ** 2) / 2 * line_t
+    line_U_st = (2 * line_S_mov - line_a * line_t ** 2) / (2 * line_t)
     var["line_U_st"] = line_U_st
     return line_U_st
 
@@ -195,7 +195,7 @@ def find_line_U_fin1(line_a, line_t, line_U_st):
 
 def find_line_U_fin2(line_a, line_t, line_S_mov):
     '''Функция возвращающая значение конечной скорости при заданных ускорении, времени, и пути в прямолинейном движении'''
-    line_U_fin = (2 * line_S_mov + line_a * line_t ** 2) / 2 * line_t
+    line_U_fin = (2 * line_S_mov + line_a * line_t ** 2) / (2 * line_t)
     var["line_U_fin"] = line_U_fin
     return line_U_fin
 
@@ -213,6 +213,6 @@ def find_line_S_mov2(line_U_fin, line_a, line_t):
 
 def find_line_L(line_S_mov, line_t, line_a):
     '''Функция возвращающая значение перемещения при заданных ускорении, времени, и пути в прямолинейном движении'''
-    line_L = line_S_mov ** 2 / line_t * line_a
+    line_L = line_S_mov ** 2 / (line_t * line_a)
     var["line_L"] = line_L
     return line_L

@@ -46,4 +46,18 @@ class metod_test(unittest.TestCase):
     def test_21(self):
         self.assertEqual(find_angle_d(19.62, 1), 90)
     def test_22(self):
-        self.assertEqual(find_angle_t(10, 5), 2))
+        self.assertEqual(find_angle_t(10, 5), 2)
+    def test_30(self):
+        self.assertEqual(find_line_U_st1(5, 3, 20), 5)
+    def test_31(self):
+        self.assertEqual(find_line_U_st2(5, 5, 100), 7.5)
+    def test_32(self):
+        self.assertEqual(find_line_U_fin1(4, 2, 1), 9)
+    def test_33(self):
+        self.assertEqual(find_line_U_fin2(6, 4, 80), 32)
+    def test_34(self):
+        self.assertEqual(find_line_S_mov1(6, 3, 2), 18)
+    def test_35(self):
+        self.assertEqual(find_line_S_mov2(100, 15, 4), 280)
+    def test_36(self):
+        self.assertEqual(find_line_L(40, 5, 2), 160)
