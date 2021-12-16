@@ -132,7 +132,6 @@ def find_angle_U_fin (angle_h_st, angle_U_st):
 
 def find_angle_U_st (angle_U_fin, angle_h_st):
     '''Функция возвращающая значение начальной скорости при движении типа бросок по углом к горизонту'''
-    from math import sqrt
     angle_U_st = math.sqrt(angle_U_fin ** 2 - 2 * 9.81 * angle_h_st)
     return angle_U_st
 
@@ -143,8 +142,7 @@ def find_angle_h_st (angle_t_fall, angle_H):
 
 def find_angle_d (angle_U_st, angle_t_fall):
     '''Функция возвращающая значение величины угла броска к горизонту при движении типа бросок по углом к горизонту'''
-    from math import asin
-    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t_fall))
+    angle_d = math.degrees(math.asin(angle_U_st / (2 * 9.81 * angle_t_fall)))
     return angle_d
 
 def find_angle_t (angle_L, angle_U_st_x):
