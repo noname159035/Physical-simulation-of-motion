@@ -102,14 +102,12 @@ def find_circle_t (circle_S, circle_U):
 
 def find_angle_U_st_x (angle_U_st, angle_d):
     '''Функция возвращающая значение начальной скорости по оси OX при движении типа бросок по углом к горизонту'''
-    from math import cos
-    angle_U_st_x = math.cos(angle_d) * angle_U_st
+    angle_U_st_x = math.cos(math.radians(angle_d)) * angle_U_st
     return angle_U_st_x
 
 def find_angle_U_st_y (angle_U_st, angle_d):
     '''Функция возвращающая значение начальной скорости по оси OY при движении типа бросок по углом к горизонту'''
-    from math import sin
-    angle_U_st_y = math.sin(angle_d) * angle_U_st
+    angle_U_st_y = math.sin(math.radians(angle_d)) * angle_U_st
     return angle_U_st_y
 
 def find_angle_t_fall (angle_U_st_y):
