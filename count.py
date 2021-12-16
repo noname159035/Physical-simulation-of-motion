@@ -1,6 +1,7 @@
 import metods
 from metods import *
 def final_count_line():
+    '''Функция рассчитывающая недостающие физические величины при прямолинейном движении'''
     if metods.var['line_U_st'] != 0:
         metods.var['line_U_fin'] = metods.find_line_U_fin1(metods.var['line_a'], metods.var['line_t'], metods.var['line_U_st'])
         metods.var['line_S_mov'] = metods.find_line_S_mov1(metods.var['line_U_st'], metods.var['line_a'], metods.var['line_t'])
@@ -16,6 +17,7 @@ def final_count_line():
     metods.var['line_L'] = metods.find_line_L(metods.var['line_S_mov'], metods.var['line_t'], metods.var['line_a'])
 
 def final_count_circle():
+    '''Функция рассчитывающая недостающие физические величины при движении по окружности'''
 
     if (metods.var['circle_w'] != 0  or metods.var['circle_U'] != 0) and metods.var['circle_R'] != 0 and metods.var['circle_t'] != 0:
             if metods.var['circle_w'] != 0 and metods.var['circle_U'] == 0 :
@@ -46,6 +48,7 @@ def final_count_circle():
             metods.var['circle_delta_f'] = metods.find_circle_delta_f(metods.var['circle_delta_s'], metods.var['circle_R'])
 
 def final_count_angle ():
+    '''Функция рассчитывающая недостающие физические величины при движении типа бросок по углом к горизонту'''
     if metods.var['angle_U_fin'] != 0:
         metods.var['angle_U_st'] = metods.find_angle_U_st (metods.var['angle_U_fin'], metods.var['angle_h_st'])
     elif metods.var["angle_d"] == 0:
