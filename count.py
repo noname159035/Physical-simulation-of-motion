@@ -46,6 +46,24 @@ def final_count_circle():
             metods.var['circle_delta_s'] = metods.find_circle_delta_s(metods.var['circle_S'], metods.var['circle_U'], metods.var['circle_T'], metods.var['circle_t'])
             metods.var['circle_delta_f'] = metods.find_circle_delta_f(metods.var['circle_delta_s'], metods.var['circle_R'])
 
+def final_count_angle ():
+    if metods.var['angle_U_fin'] != 0:
+        metods.var['angle_U_st'] = metods.find_angle_U_st (metods.var['angle_U_fin'], metods.var['angle_h_st'])
+    elif metods.var["angle_d"] == 0:
+        metods.var["angle_d"] = metods.find_angle_d (metods.var['angle_U_st'], metods.var['angle_t_fall'])
+    metods.var['angle_U_st_x'] = metods.find_angle_U_st_x (metods.var['angle_U_st'], metods.var["angle_d"])
+    metods.var['angle_U_st_y'] = metods.find_angle_U_st_y (metods.var['angle_U_st'], metods.var["angle_d"])
 
+    if metods.var['angle_t'] != 0 and metods.var['angle_h_st'] != 0:
+        metods.var['angle_t_fall'] = metods.find_angle_t_fall(metods.var['angle_U_st_y'])
+        metods.var["angle_H"] = metods.find_angle_H(metods.var['angle_h_st'], metods.var['angle_U_st_y'])
+        metods.var["angle_L"] = metods.find_angle_L(metods.var['angle_U_st_x'], metods.var['angle_t'])
+
+    elif metods.var["angle_H"] != 0 and metods.var['angle_t_fall'] != 0 and metods.var["angle_L"] !=0:
+        metods.var['angle_h_st'] = metods.find_angle_h_st(metods.var['angle_t_fall'], metods.var["angle_H"])
+        metods.var['angle_t'] = metods.find_angle_t(metods.var["angle_L"], metods.var['angle_U_st_x'])
+
+    if metods.var['angle_U_fin'] == 0:
+        metods.var['angle_U_fin'] = metods.find_angle_U_fin(metods.var['angle_h_st'], metods.var['angle_U_st'])
 
 
