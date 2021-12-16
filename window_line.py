@@ -2,6 +2,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QMainWindow
 from Resurces import res_rc
 from metods import var
+from count import final_count_line
 
 SpeedStartIsVisible = True
 SpeedFinishIsVisible = True
@@ -10,7 +11,7 @@ MovingInVisible = True
 class Ui_Line(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi('Forms\\line.ui', self)
+        uic.loadUi('Forms\line.ui', self)
         self.button_line_input_speed_start.clicked.connect(self.save_speed_start)
         self.button_line_input_acceleration.clicked.connect(self.save_acceleration)
         self.button_line_input_mov.clicked.connect(self.save_mov)
@@ -113,8 +114,9 @@ class Ui_Line(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
-        uic.loadUi('Forms\\output_line.ui', self)
-        self.line_out_speed_start.insert("line_U_st")
-        self.line_out_mov.insert("line_S_mov")
-        self.line_out_speed_fin.insert("line_U_fin")
-        self.line_out_L.insert("line_L")
+        final_count_line()
+        uic.loadUi('Forms\output_line.ui', self)
+        self.line_out_speed_start.insert(str(var["line_U_st"]))
+        self.line_out_mov.insert(str(var["line_S_mov"]))
+        self.line_out_speed_fin.insert(str(var["line_U_fin"]))
+        self.line_out_L.insert(str(var["line_L"]))

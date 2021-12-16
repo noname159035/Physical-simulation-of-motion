@@ -2,6 +2,7 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QMainWindow
 from Resurces import res_rc
 from metods import var
+from count import final_count_circle
 
 WayIsVisible = True
 RadiusIsVisible = True
@@ -12,7 +13,7 @@ AngleSpeedIsVisible = True
 class Ui_Circle(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi('Forms\\circle.ui', self)
+        uic.loadUi('Forms\circle.ui', self)
         self.button_circle_input_speed.clicked.connect(self.save_speed)
         self.button_circle_input_angle_speed.clicked.connect(self.save_angle_speed)
         self.button_circle_input_way.clicked.connect(self.save_way)
@@ -133,12 +134,13 @@ class Ui_Circle(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
-        uic.loadUi('Forms\\output_circle.ui', self)
-        self.circle_out_angle_speed.insert("circle_w")
-        self.circle_out_speed.insert("circle_U")
-        self.circle_out_del_way.insert("circle_delta_s")
-        self.circle_out_T.insert("circle_T")
-        self.circle_out_radius.insert("circle_R")
-        self.circle_out_acceleration_start.insert("circle_a_o")
-        self.circle_out_del_power.insert("circle_delta_f")
+        final_count_circle()
+        uic.loadUi('Forms\output_circle.ui', self)
+        self.circle_out_angle_speed.insert(str(var["circle_w"]))
+        self.circle_out_speed.insert(str(var["circle_U"]))
+        self.circle_out_del_way.insert(str(var["circle_delta_s"]))
+        self.circle_out_T.insert(str(var["circle_T"]))
+        self.circle_out_radius.insert(str(var["circle_R"]))
+        self.circle_out_acceleration_start.insert(str(var["circle_a_o"]))
+        self.circle_out_del_power.insert(str(var["circle_delta_f"]))
 

@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        uic.loadUi('Forms\\win_main.ui', self)
+        uic.loadUi('Forms\win_main.ui', self)
         self.choose_move1.clicked.connect(self.go_to_circle)
         self.choose_move2.clicked.connect(self.go_to_line)
         self.choose_move3.clicked.connect(self.go_to_angle)
