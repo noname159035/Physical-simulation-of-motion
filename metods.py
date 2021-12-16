@@ -72,6 +72,10 @@ def find_circle_R (circle_U, circle_w):
     circle_R = circle_U / circle_w
     return circle_R
 
+def find_circle_R2(circle_S, circle_t, circle_w):
+    circle_R = circle_S / (circle_t * circle_w)
+    return circle_R
+
 def find_circle_U3 (circle_a_o, circle_R):
     from math import sqrt
     circle_U = math.sqrt(circle_a_o * circle_R)
