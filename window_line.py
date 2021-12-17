@@ -21,6 +21,7 @@ class Ui_Line(QMainWindow):
 
 
     def save_speed_start(self):
+        '''Функция сохраняет начальную скорость в var'''
         try:
             var["line_U_st"] = float(self.line_input_speed_start.text())
             global SpeedStartIsVisible
@@ -35,6 +36,7 @@ class Ui_Line(QMainWindow):
 
 
     def save_acceleration(self):
+        '''Функция сохраняет ускорение в var'''
         try:
             var["line_a"] = float(self.line_input_acceleration.text())
             global SpeedFinishIsVisible, SpeedStartIsVisible, MovingInVisible
@@ -62,6 +64,7 @@ class Ui_Line(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_time(self):
+        '''Функция сохраняет время в var'''
         try:
             var["line_t"] = float(self.line_input_time.text())
             global SpeedFinishIsVisible, SpeedStartIsVisible, MovingInVisible
@@ -89,6 +92,7 @@ class Ui_Line(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_speed_finish(self):
+        '''Функция сохраняет конечную скорость в var'''
         try:
             global SpeedFinishIsVisible
             SpeedFinishIsVisible = False
@@ -101,6 +105,7 @@ class Ui_Line(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_mov(self):
+        '''Функция сохраняет пройденный путь в var'''
         try:
             global MovingInVisible
             MovingInVisible = False
@@ -114,6 +119,7 @@ class Ui_Line(QMainWindow):
             print("[Log] Err: в ячейку подают строку")
 
     def save_val(self):
+        '''Функция сохраняет все значения, запускает метод подсчёта, переходит на окно вывода расчётов'''
         final_count_line()
         uic.loadUi('Forms\output_line.ui', self)
         self.line_out_speed_start.insert(str(var["line_U_st"]))
