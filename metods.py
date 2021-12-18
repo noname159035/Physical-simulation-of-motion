@@ -84,7 +84,7 @@ def find_circle_delta_s (circle_S, circle_U, circle_T, circle_t):
 def find_circle_delta_f (circle_delta_s, circle_R):
     '''Функция возвращающая значение углового перемещения при движении по окружности'''
     '''circle_R - радиус вводимый с клавиатуры'''
-    '''circle_delta_s - смещение относительно точки начала движения рассчитанное из функции def_circle_delta_s'''
+    '''circle_delta_s - смещение относительно точки начала движения рассчитанное из функции find_circle_delta_s'''
     circle_delta_f = circle_delta_s / circle_R
     return circle_delta_f
 
@@ -130,63 +130,84 @@ def find_circle_t (circle_S, circle_U):
 
 def find_angle_U_st_x (angle_U_st, angle_d):
     '''Функция возвращающая значение начальной скорости по оси OX при движении типа бросок по углом к горизонту'''
+    '''angle_U_st - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st'''
+    '''angle_d - угол вводимый с клавиатуры или расчитываемый из функции find_angle_d'''
     angle_U_st_x = math.cos(math.radians(angle_d)) * angle_U_st
     return angle_U_st_x
 
 def find_angle_U_st_y (angle_U_st, angle_d):
     '''Функция возвращающая значение начальной скорости по оси OY при движении типа бросок по углом к горизонту'''
+    '''angle_U_st - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st'''
+    '''angle_d - угол вводимый с клавиатуры или расчитываемый из функции find_angle_d'''
     angle_U_st_y = math.sin(math.radians(angle_d)) * angle_U_st
     return angle_U_st_y
 
 def find_angle_t_fall (angle_U_st_y):
     '''Функция возвращающая значение времени падения тела при движении типа бросок по углом к горизонту'''
+    '''angle_U_st_y - скорсть расчитываемая из функции find_angle_U_st_y'''
     angle_t_fall = angle_U_st_y / 9.81
     return angle_t_fall
 
 def find_angle_H (angle_h_st, angle_U_st_y):
     '''Функция возвращающая значение максимальной высоты подъема при движении типа бросок по углом к горизонту'''
+    '''angle_h_st - начальная высота вводимая с клавиатуры или расчитываемая из функции find_angle_h_st'''
+    '''angle_U_st_y - скорсть расчитываемая из функции find_angle_U_st_y'''
     angle_H = angle_h_st + angle_U_st_y ** 2 / (9.81 * 2)
     return angle_H
 
 def find_angle_L (angle_U_st_x, angle_t):
     '''Функция возвращающая значение пути пройденного телом по оси OX при движении типа бросок по углом к горизонту'''
+    '''angle_U_st_x - скорсть расчитываемая из функции find_angle_U_st_x'''
+    '''angle_t - время полета вводимое с клавиатуры или расчитываемое из функции find_angle_t'''
     ange_L = angle_U_st_x * angle_t
     return ange_L
 
 def find_angle_U_fin (angle_h_st, angle_U_st):
     '''Функция возвращающая значение конечной скорости при движении типа бросок по углом к горизонту'''
+    '''angle_h_st - начальная высота вводимая с клавиатуры или расчитываемая из функции find_angle_h_st'''
+    '''angle_U_st - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st'''
     angle_U_fin = math.sqrt(2 * 9.81 * angle_h_st + angle_U_st ** 2)
     return angle_U_fin
 
 def find_angle_U_st (angle_U_fin, angle_h_st):
     '''Функция возвращающая значение начальной скорости при движении типа бросок по углом к горизонту'''
-    from math import sqrt
+    '''angle_U_fin - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_fin'''
+    '''angle_U_st - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st'''
     angle_U_st = math.sqrt(angle_U_fin ** 2 - 2 * 9.81 * angle_h_st)
     return angle_U_st
 
 def find_angle_h_st (angle_t_fall, angle_H):
     '''Функция возвращающая значение высоты точки броска тела при движении типа бросок по углом к горизонту'''
+    '''angle_t_fall - время подъема вводимое с клавиатуры или расчитываемое из функции find_angle_t_fall'''
+    '''angle_h_st - начальная высота вводимая с клавиатуры или расчитываемая из функции find_angle_h_st'''
     angle_h_st = angle_H - 9.81 * angle_t_fall ** 2 / 2
     return angle_h_st
 
 def find_angle_d (angle_U_st, angle_t_fall):
     '''Функция возвращающая значение величины угла броска к горизонту при движении типа бросок по углом к горизонту'''
-    from math import asin
-    angle_d = math.asin(angle_U_st / (2 * 9.81 * angle_t_fall))
+    '''angle_U_st - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st'''
+    '''angle_t_fall - время подъема вводимое с клавиатуры или расчитываемое из функции find_angle_t_fall'''
+    angle_d = math.degrees(math.asin(angle_U_st / (2 * 9.81 * angle_t_fall)))
     return angle_d
 
 def find_angle_t (angle_L, angle_U_st_x):
     '''Функция возвращающая значение всего времени движеня тела при движении типа бросок по углом к горизонту'''
+    '''angle_L - длина пути вводимая с клавиатуры или расчитываемая из функции find_angle_L'''
+    '''angle_U_st_x - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st_x'''
     angle_t = angle_L / angle_U_st_x
     return angle_t
 
 def find_angle_x_t (angle_U_st_x, t):
     '''Функция возвращающая значение x при заданом t'''
+    '''angle_U_st_x - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st_x'''
+    '''???????????????????????????'''
     angle_x_t = angle_U_st_x * t
     return angle_x_t
 
 def find_angle_y_t (angle_U_st_y, t):
     '''Функция возвращающая значение y при заданом t'''
+    '''angle_U_st_y - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st_y'''
+    '''???????????????????????????'''
     angle_y_t = var["angle_h_st"] + angle_U_st_y * t - 9.81 * t ** 2 / 2
     return angle_y_t
 
