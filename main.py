@@ -55,14 +55,17 @@ class MainWindow(QMainWindow):
         self.choose_move3.clicked.connect(self.go_to_angle)
 
     def go_to_circle(self):
+        """ переходит на окно с вводом данных для движения по окружности"""
         window_main.close()
         window_circle.show()
 
     def go_to_line(self):
+        """переходит на окно с вводом данных для движения под углом"""
         window_main.close()
         window_line.show()
 
     def go_to_angle(self):
+        """переходит на окно с вводом данных для линейного движения"""
         window_main.close()
         window_angle.show()
 
