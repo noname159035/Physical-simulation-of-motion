@@ -170,7 +170,7 @@ class Ui_Angle(QMainWindow):
         self.angle_show_graph.clicked.connect(self.get_graph)
 
     def get_graph(self):
-        """генерирует и выводить график"""
+        """генерирует и выводит график"""
         t = 0
         x, y = [], []
         while t < var["angle_t"]:

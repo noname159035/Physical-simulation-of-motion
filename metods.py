@@ -199,15 +199,15 @@ def find_angle_t (angle_L, angle_U_st_x):
 
 def find_angle_x_t (angle_U_st_x, t):
     '''Функция возвращающая значение x при заданом t'''
+    '''t - время полета заданого тела'''
     '''angle_U_st_x - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st_x'''
-    '''???????????????????????????'''
     angle_x_t = angle_U_st_x * t
     return angle_x_t
 
 def find_angle_y_t (angle_U_st_y, t):
     '''Функция возвращающая значение y при заданом t'''
+    '''t - время полета заданого тела'''
     '''angle_U_st_y - скорость вводимая с клавиатуры или расчитываемая из функции find_angle_U_st_y'''
-    '''???????????????????????????'''
     angle_y_t = var["angle_h_st"] + angle_U_st_y * t - 9.81 * t ** 2 / 2
     return angle_y_t
 
